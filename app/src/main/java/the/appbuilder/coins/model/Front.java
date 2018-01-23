@@ -41,7 +41,6 @@ public class Front extends ABModel {
     // -------------------- you can customize them to fit your business requirements
 
 
-	
     /** Following methods are for 2-way Databinding **/
     /**
       * getPercWatcher()
@@ -80,12 +79,10 @@ public class Front extends ABModel {
       * getPercAsString()
       * return Perc as a string, it is useful to show attribute into textfields
       */
-      
+
     public String getPercAsString() {
         // NOTE: You can customize how you want to render perc
-        // Using NumberFormat ( NumberFormat.getCurrencyInstance(), NumberFormat.getPercentInstance() )
-        // or building your own formatter
-        return super.getAsString(this.perc);
+        return (this.perc.floatValue() > 0 ? "+" : "") + super.getAsString(this.perc) + "%";
     }
     
 
@@ -317,7 +314,15 @@ public class Front extends ABModel {
         // or building your own formatter
         return super.getAsString(this.vwapDataBTC);
     }
-    
+
+
+    public String getImageUrl() {
+        return "http://coincap.io/images/coins/"
+                + long_var
+                .replace(" ", "")
+                .toLowerCase()
+                + ".png";
+    }
 
 
 
@@ -361,9 +366,7 @@ public class Front extends ABModel {
       
     public String getPriceAsString() {
         // NOTE: You can customize how you want to render price
-        // Using NumberFormat ( NumberFormat.getCurrencyInstance(), NumberFormat.getPercentInstance() )
-        // or building your own formatter
-        return super.getAsString(this.price);
+        return super.getAsString(this.price, NumberFormat.getCurrencyInstance());
     }
     
 
@@ -447,8 +450,6 @@ public class Front extends ABModel {
       
     public String getVolumeAsString() {
         // NOTE: You can customize how you want to render volume
-        // Using NumberFormat ( NumberFormat.getCurrencyInstance(), NumberFormat.getPercentInstance() )
-        // or building your own formatter
         return super.getAsString(this.volume);
     }
     

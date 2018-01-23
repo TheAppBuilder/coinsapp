@@ -1,181 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="front" type="the.appbuilder.coins.model.Front"/>
+        <variable name="presenter" type="the.appbuilder.coins.activities.FrontRecycleListActivity"/>
+    </data>
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="130dp"
         card_view:contentPadding="10dp"
         card_view:cardCornerRadius="4dp">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
 
-        <!-- Loop every string attribute -->
-        
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_weight="1"
-                android:id="@+id/label_perc"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                style="@style/ShimmerImage"
                 />
+
             <TextView
+                android:layout_toRightOf="@+id/image"
+                android:layout_width="60dp"
+                android:id="@+id/item_short_var"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="24dp"
                 style="@style/ShimmerText"
-                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_toRightOf="@+id/image"
+                android:layout_width="60dp"
+                android:id="@+id/item_long_var"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_alignBottom="@+id/image"
+                tools:text="Bitcoin"
+                style="@style/ShimmerText"
+                />
+
+            <ImageView
+                android:id="@+id/volume_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                style="@style/ShimmerImage"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_toRightOf="@+id/volume_image"
+                android:layout_width="120dp"
+                android:id="@+id/item_volume"
+                android:layout_alignBottom="@id/volume_image"
+                android:maxLines="1"
+                style="@style/ShimmerText"
+                />
+
+            <TextView
+                android:textSize="38dp"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/item_perc"
+                style="@style/ShimmerText"
                 android:maxLines="1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
                 />
-        </LinearLayout>
-        <TextView
-            style="@style/ShimmerText"
-            android:layout_centerVertical="true"
-            android:id="@+id/item_long_var"
-            android:maxLines="1"
-            android:ellipsize="end"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+
             <TextView
-                style="@style/ShimmerText"
-                android:layout_weight="1"
-                android:id="@+id/label_vwapdata"
-                />
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_centerVertical="true"
-                android:id="@+id/item_vwapdata"
-                android:maxLines="1"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_weight="1"
-                android:id="@+id/label_cap24hrchange"
-                />
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_centerVertical="true"
-                android:id="@+id/item_cap24hrchange"
-                android:maxLines="1"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_weight="1"
-                android:id="@+id/label_supply"
-                />
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_centerVertical="true"
-                android:id="@+id/item_supply"
-                android:maxLines="1"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_weight="1"
-                android:id="@+id/label_vwapdatabtc"
-                />
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_centerVertical="true"
-                android:id="@+id/item_vwapdatabtc"
-                android:maxLines="1"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_weight="1"
-                android:id="@+id/label_price"
-                />
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_centerVertical="true"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/item_price"
                 android:maxLines="1"
-                />
-        </LinearLayout>
-        <TextView
-            style="@style/ShimmerText"
-            android:layout_centerVertical="true"
-            android:id="@+id/item_short_var"
-            android:maxLines="1"
-            android:ellipsize="end"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
                 style="@style/ShimmerText"
-                android:layout_weight="1"
-                android:id="@+id/label_volume"
+                android:layout_below="@id/item_perc"
+                android:layout_alignParentEnd="true"
+                android:textSize="20dp"
                 />
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_centerVertical="true"
-                android:id="@+id/item_volume"
-                android:maxLines="1"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_weight="1"
-                android:id="@+id/label_mktcap"
-                />
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_centerVertical="true"
-                android:id="@+id/item_mktcap"
-                android:maxLines="1"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_weight="1"
-                android:id="@+id/label_usdvolume"
-                />
-            <TextView
-                style="@style/ShimmerText"
-                android:layout_centerVertical="true"
-                android:id="@+id/item_usdvolume"
-                android:maxLines="1"
-                />
-        </LinearLayout>
+        </RelativeLayout>
 
-    </LinearLayout>
     </android.support.v7.widget.CardView>
 </layout>

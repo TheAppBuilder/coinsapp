@@ -13,7 +13,7 @@
 
 
     <!-- Loop on classes -->
-    <string name="title_activity_front_list">Front List</string>
+    <string name="title_activity_front_list">Crypto Coins</string>
     <string name="title_activity_front_edit">Front Edit</string>
     <string name="title_activity_front_view">Front View</string>
 
