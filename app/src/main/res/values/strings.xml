@@ -1,0 +1,47 @@
+<!-- app/src/main/res/values/strings.xml -->
+<resources>
+    <string name="app_name">the.appbuilder.coins</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="button_save">Save</string>
+    <string name="button_delete">Delete</string>
+    <string name="title_activity_on_boarding">Welcome On Boarding</string>
+    <string name="title_activity_main_activity">@string/app_name</string>
+
+
+    <!-- Loop on classes -->
+    <string name="title_activity_front_list">Front List</string>
+    <string name="title_activity_front_edit">Front Edit</string>
+    <string name="title_activity_front_view">Front View</string>
+
+    <!-- attributes hints -->
+    <string name="label_front_perc">Perc</string>
+    <string name="label_front_long_var">Long_var</string>
+    <string name="label_front_vwapdata">Vwapdata</string>
+    <string name="label_front_cap24hrchange">Cap24hrchange</string>
+    <string name="label_front_supply">Supply</string>
+    <string name="label_front_vwapdatabtc">Vwapdatabtc</string>
+    <string name="label_front_price">Price</string>
+    <string name="label_front_short_var">Short_var</string>
+    <string name="label_front_volume">Volume</string>
+    <string name="label_front_shapeshift">Shapeshift</string>
+    <string name="label_front_mktcap">Mktcap</string>
+    <string name="label_front_usdvolume">Usdvolume</string>
+
+    <!-- attributes labels -->
+    <string name="hint_front_perc">@string/label_front_perc</string>
+    <string name="hint_front_long_var">@string/label_front_long_var</string>
+    <string name="hint_front_vwapdata">@string/label_front_vwapdata</string>
+    <string name="hint_front_cap24hrchange">@string/label_front_cap24hrchange</string>
+    <string name="hint_front_supply">@string/label_front_supply</string>
+    <string name="hint_front_vwapdatabtc">@string/label_front_vwapdatabtc</string>
+    <string name="hint_front_price">@string/label_front_price</string>
+    <string name="hint_front_short_var">@string/label_front_short_var</string>
+    <string name="hint_front_volume">@string/label_front_volume</string>
+    <string name="hint_front_shapeshift">@string/label_front_shapeshift</string>
+    <string name="hint_front_mktcap">@string/label_front_mktcap</string>
+    <string name="hint_front_usdvolume">@string/label_front_usdvolume</string>
+</resources>
